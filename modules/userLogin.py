@@ -28,7 +28,7 @@ def urp_setup(sself):
     except requests.exceptions.ConnectionError:
         print("网络错误")
         QMessageBox.about(sself.ui, '[错误]', '网络错误')
-    with open('captcha.jpg', 'wb') as http_capfile:
+    with open('captcha.gif', 'wb') as http_capfile:
         http_capfile.write(http_captcha.content)
         http_capfile.close()
     pixmap = QPixmap('captcha.jpg')
